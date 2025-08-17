@@ -2,8 +2,17 @@
 
 <template>
   <div>
-    <h1 class="bg-red-200 text-3xl font-bold text-center">
-      Welcome to My Vue App
+    <h1 class="page-container">
+      Welcome to EcoSphere
     </h1>
   </div>
 </template>
+
+<style scoped>
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+</style>

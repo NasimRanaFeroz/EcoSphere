@@ -1,24 +1,34 @@
 <script setup>
-import { ref } from 'vue';
-import { Instagram, Facebook, Twitter, Music, Mail, ArrowRight, Leaf, Recycle, Award } from 'lucide-vue-next';
-import Logo from '../assets/images/logo.png';
+import { ref } from "vue";
+import {
+  Instagram,
+  Facebook,
+  Twitter,
+  Music,
+  Mail,
+  ArrowRight,
+  Leaf,
+  Recycle,
+  Award,
+} from "lucide-vue-next";
+import Logo from "../assets/images/logo.png";
 
-const email = ref('');
+const email = ref("");
 const isSubscribed = ref(false);
 
 const handleSubscribe = (e) => {
   e.preventDefault();
   if (email.value.trim()) {
     isSubscribed.value = true;
-    email.value = '';
-    setTimeout(() => isSubscribed.value = false, 3000);
+    email.value = "";
+    setTimeout(() => (isSubscribed.value = false), 3000);
   }
 };
 
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 };
 </script>
@@ -33,10 +43,11 @@ const scrollToTop = () => {
             <span class="logo-text">EcoSphere</span>
           </div>
           <p class="footer-mission">
-            Creating a sustainable future, one eco-friendly product at a time. 
-            Join us in making the world greener and cleaner for generations to come.
+            Creating a sustainable future, one eco-friendly product at a time.
+            Join us in making the world greener and cleaner for generations to
+            come.
           </p>
-          
+
           <div class="eco-badges">
             <div class="eco-badge">
               <Leaf class="badge-icon" />
@@ -56,17 +67,20 @@ const scrollToTop = () => {
         <div class="footer-links">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="links-list">
-            <li v-for="link in [
-              { name: 'Home', href: '/' },
-              { name: 'Shop', href: '/shop' },
-              { name: 'About', href: '/about' },
-              { name: 'Contact', href: '/contact' },
-              { name: 'FAQ', href: '/faq' }
-            ]" :key="link.name">
-              <a :href="link.href" class="footer-link">
+            <li
+              v-for="link in [
+                { name: 'Home', path: '/' },
+                { name: 'Shop', path: '/shop' },
+                { name: 'About', path: '/about' },
+                { name: 'Contact', path: '/contact-us' },
+                { name: 'FAQ', path: '/faq' },
+              ]"
+              :key="link.name"
+            >
+              <router-link :to="link.path" class="footer-link">
                 <span class="link-text">{{ link.name }}</span>
                 <ArrowRight class="link-arrow" />
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -74,23 +88,29 @@ const scrollToTop = () => {
         <div class="footer-links">
           <h3 class="footer-heading">Legal</h3>
           <ul class="links-list">
-            <li v-for="link in [
-              { name: 'Privacy Policy', href: '/privacy' },
-              { name: 'Terms & Conditions', href: '/terms' },
-              { name: 'Shipping Policy', href: '/shipping' },
-              { name: 'Return Policy', href: '/returns' }
-            ]" :key="link.name">
-              <a :href="link.href" class="footer-link">
+            <li
+              v-for="link in [
+                { name: 'Privacy Policy', path: '/privacy-and-terms' },
+                { name: 'Terms & Conditions', path: '/privacy-and-terms' },
+                {
+                  name: 'Shipping Policy',
+                  path: '/shipping-and-returns-policy',
+                },
+                { name: 'Return Policy', path: '/shipping-and-returns-policy' },
+              ]"
+              :key="link.name"
+            >
+              <router-link :to="link.path" class="footer-link">
                 <span class="link-text">{{ link.name }}</span>
                 <ArrowRight class="link-arrow" />
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
 
         <div class="footer-newsletter">
           <h3 class="footer-heading">Stay Connected</h3>
-          
+
           <form @submit.prevent="handleSubscribe" class="newsletter-form">
             <div class="input-group">
               <input
@@ -115,13 +135,23 @@ const scrollToTop = () => {
             <div class="social-icons">
               <a
                 v-for="(social, index) in [
-                  { icon: Instagram, color: 'pink' },
-                  { icon: Facebook, color: 'blue' },
-                  { icon: Twitter, color: 'sky' },
-                  { icon: Music, color: 'red' }
+                  {
+                    icon: Instagram,
+                    color: 'pink',
+                    url: 'https://instagram.com',
+                  },
+                  {
+                    icon: Facebook,
+                    color: 'blue',
+                    url: 'https://facebook.com',
+                  },
+                  { icon: Twitter, color: 'sky', url: 'https://twitter.com' },
+                  { icon: Music, color: 'red', url: 'https://tiktok.com' },
                 ]"
                 :key="index"
-                href="#"
+                :href="social.url"
+                target="_blank"
+                rel="noopener noreferrer"
                 :class="`social-icon ${social.color}`"
               >
                 <component :is="social.icon" class="social-icon-svg" />
@@ -141,7 +171,7 @@ const scrollToTop = () => {
             <span>Sustainably powering the future</span>
           </div>
         </div>
-        
+
         <div class="certifications">
           <div class="certification-badge green">
             <Leaf class="certification-icon" />
@@ -312,6 +342,15 @@ const scrollToTop = () => {
   opacity: 1;
 }
 
+.footer-link.router-link-active {
+  color: #4ade80;
+  font-weight: 500;
+}
+
+.footer-link.router-link-active .link-arrow {
+  opacity: 1;
+}
+
 .newsletter-form {
   margin-bottom: 2rem;
 }
@@ -372,8 +411,13 @@ const scrollToTop = () => {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .social-heading {
@@ -397,6 +441,7 @@ const scrollToTop = () => {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .social-icon:hover {

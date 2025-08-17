@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { ChevronDown, User, Settings, LogOut, BarChart3 } from 'lucide-vue-next';
 
-const isLoggedIn = ref(false);
+const isLoggedIn = ref(true);
 const showDropdown = ref(false);
 const isMobileMenuOpen = ref(false);
 const showProfileDropdown = ref(false);
@@ -154,7 +154,6 @@ const toggleProfileDropdown = () => {
 </template>
 
 <style scoped>
-/* Base Styles */
 .navbar {
   background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -176,10 +175,8 @@ const toggleProfileDropdown = () => {
   height: 5rem;
 }
 
-/* Logo Styles */
 .logo-container {
-  display: flex;
-  align-items: center;
+margin: auto 0
 }
 
 .logo-link {
@@ -195,6 +192,7 @@ const toggleProfileDropdown = () => {
 }
 
 .logo-text {
+  padding-top: 0.5rem;
   font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(to right, #4ade80, #2dd4bf);
@@ -203,7 +201,6 @@ const toggleProfileDropdown = () => {
   color: transparent;
 }
 
-/* Desktop Navigation */
 .desktop-nav {
   display: none;
   align-items: center;
@@ -376,7 +373,6 @@ const toggleProfileDropdown = () => {
   color: #f87171;
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn {
   display: block;
 }
@@ -433,7 +429,6 @@ const toggleProfileDropdown = () => {
   transform: rotate(-45deg) translate(0.3rem, -0.3rem);
 }
 
-/* Mobile Menu */
 .mobile-menu {
   position: absolute;
   top: 100%;
