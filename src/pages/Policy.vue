@@ -500,7 +500,6 @@ export default {
 </template>
 
 <style>
-/* Base Styles */
 .shipping-returns-page {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #f0fdf4, white, #f0fdf4);
@@ -508,7 +507,6 @@ export default {
   color: #333;
 }
 
-/* Hero Section */
 .shipping-hero {
   background: linear-gradient(to right, #16a34a, #0d9488, #16a34a);
   color: white;
@@ -553,14 +551,12 @@ export default {
   margin: 0 auto;
 }
 
-/* Main Container */
 .shipping-container {
   max-width: 80rem;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-/* Tab Navigation */
 .tab-container {
   display: flex;
   justify-content: center;
@@ -608,7 +604,6 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Promo Sections */
 .eco-promise,
 .satisfaction-guarantee {
   background: linear-gradient(to right, #16a34a, #0d9488);
@@ -654,7 +649,6 @@ export default {
   margin: 0 auto;
 }
 
-/* Cards */
 .shipping-card,
 .returns-card,
 .packaging-card,
@@ -697,7 +691,6 @@ export default {
   padding: 1.5rem;
 }
 
-/* Shipping Options */
 .shipping-options {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -755,7 +748,6 @@ export default {
   margin-bottom: 0.5rem;
 }
 
-/* Tables */
 .shipping-zones,
 .return-reasons {
   margin-top: 2rem;
@@ -808,7 +800,6 @@ tr:hover {
   background: #f9fafb;
 }
 
-/* Packaging Features */
 .packaging-features {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -853,7 +844,6 @@ tr:hover {
   color: #4b5563;
 }
 
-/* FAQ */
 .faq-items {
   padding: 1.5rem;
 }
@@ -876,7 +866,6 @@ tr:hover {
   color: #4b5563;
 }
 
-/* Return Steps */
 .return-steps {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -915,7 +904,6 @@ tr:hover {
   color: #4b5563;
 }
 
-/* Exchange Content */
 .exchange-content {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -982,7 +970,6 @@ tr:hover {
   color: #4b5563;
 }
 
-/* Notes Card */
 .notes-content {
   padding: 1.5rem;
 }
@@ -1061,7 +1048,6 @@ tr:hover {
   height: 1rem;
 }
 
-/* CTA */
 .shipping-cta {
   background: linear-gradient(to right, #16a34a, #0d9488);
   border-radius: 1rem;
@@ -1129,7 +1115,6 @@ tr:hover {
   height: 1rem;
 }
 
-/* Responsive Styles */
 @media (min-width: 768px) {
   .shipping-options {
     grid-template-columns: repeat(2, 1fr);

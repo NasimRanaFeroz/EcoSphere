@@ -422,7 +422,6 @@ export default {
   color: #333;
 }
 
-/* Hero Section */
 .legal-hero {
   background: linear-gradient(to right, #16a34a, #0d9488, #16a34a);
   color: white;
@@ -467,14 +466,12 @@ export default {
   margin: 0 auto;
 }
 
-/* Main Container */
 .legal-container {
   max-width: 80rem;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-/* Tab Navigation */
 .tab-container {
   display: flex;
   justify-content: center;
@@ -523,7 +520,6 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Legal Card */
 .legal-card {
   background: white;
   border-radius: 1rem;
@@ -566,7 +562,6 @@ export default {
   padding: 2rem;
 }
 
-/* Legal Sections */
 .legal-section {
   margin-bottom: 2rem;
 }
@@ -616,7 +611,6 @@ export default {
   margin-bottom: 0.5rem;
 }
 
-/* Info Groups */
 .section-content {
   display: flex;
   flex-direction: column;
@@ -629,7 +623,6 @@ export default {
   margin-bottom: 0.5rem;
 }
 
-/* Usage Grid */
 .usage-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -665,7 +658,6 @@ export default {
   margin-bottom: 0;
 }
 
-/* Notice Boxes */
 .notice-box {
   display: flex;
   gap: 0.75rem;
@@ -712,7 +704,6 @@ export default {
   margin-top: 0 !important;
 }
 
-/* Grid Section */
 .grid-section {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -725,7 +716,6 @@ export default {
   padding-left: 1.25rem;
 }
 
-/* Contact Section */
 .contact-section {
   padding-top: 1.5rem;
   border-top: 1px solid #e5e7eb;
@@ -753,7 +743,6 @@ export default {
   margin-top: 0.5rem;
 }
 
-/* CTA */
 .legal-cta {
   background: linear-gradient(to right, #16a34a, #0d9488);
   border-radius: 1rem;
@@ -798,7 +787,6 @@ export default {
   height: 1rem;
 }
 
-/* Responsive Styles */
 @media (min-width: 768px) {
   .usage-grid {
     grid-template-columns: repeat(2, 1fr);

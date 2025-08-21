@@ -78,7 +78,7 @@ export default {
           expertise: "Environmental Impact",
         },
         {
-          name: "Mehejabin Sumu",
+          name: "Mehjabin Sumu",
           role: "Community Manager",
           bio: "Building bridges between conscious consumers and sustainable brands to create lasting positive change.",
           expertise: "Community Building",
@@ -546,7 +546,6 @@ export default {
   line-height: 1.6;
 }
 
-/* Team Section */
 .team-section {
   padding: 80px 0;
   background: linear-gradient(to bottom right, #f0fdf4, #ecfdf5);
@@ -634,7 +633,6 @@ export default {
   margin-right: 8px;
 }
 
-/* CTA Section */
 .cta-section {
   padding: 80px 0;
   background: linear-gradient(to right, #16a34a, #0d9488);
@@ -708,7 +706,6 @@ export default {
   margin-left: 10px;
 }
 
-/* Animations */
 @keyframes pulse {
   0%,
   100% {
@@ -741,7 +738,6 @@ export default {
   }
 }
 
-/* Responsive Styles */
 @media (min-width: 768px) {
   .mission-content {
     grid-template-columns: 1fr 1fr;

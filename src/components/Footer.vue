@@ -90,8 +90,11 @@ const scrollToTop = () => {
           <ul class="links-list">
             <li
               v-for="link in [
-                { name: 'Privacy Policy', path: '/privacy-and-terms' },
-                { name: 'Terms & Conditions', path: '/privacy-and-terms' },
+                { name: 'Privacy Policy', path: '/privacy-policy-and-terms' },
+                {
+                  name: 'Terms & Conditions',
+                  path: '/privacy-policy-and-terms',
+                },
                 {
                   name: 'Shipping Policy',
                   path: '/shipping-and-returns-policy',

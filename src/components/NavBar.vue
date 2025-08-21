@@ -1,11 +1,19 @@
 <script setup>
-import { ref } from 'vue';
-import { ChevronDown, User, Settings, LogOut, BarChart3 } from 'lucide-vue-next';
+import { ref } from "vue";
+import {
+  ChevronDown,
+  User,
+  Settings,
+  LogOut,
+  BarChart3,
+  ShoppingCart,
+} from "lucide-vue-next";
 
 const isLoggedIn = ref(true);
 const showDropdown = ref(false);
 const isMobileMenuOpen = ref(false);
 const showProfileDropdown = ref(false);
+const cartCount = ref(0);
 
 const toggleLogin = () => {
   isLoggedIn.value = !isLoggedIn.value;
@@ -47,7 +55,18 @@ const toggleProfileDropdown = () => {
             Sign Up
           </button>
 
-          <div v-else class="profile-section">
+          <div v-if="isLoggedIn" class="cart-section">
+            <button @click="$router.push('/cart')" class="cart-button">
+              <div class="cart-icon-wrapper">
+                <ShoppingCart class="cart-icon" />
+                <span v-if="cartCount > 0" class="cart-badge">{{
+                  cartCount
+                }}</span>
+              </div>
+            </button>
+          </div>
+
+          <div v-if="isLoggedIn" class="profile-section">
             <button @click="toggleProfileDropdown" class="profile-toggle">
               <div class="user-icon">
                 <User class="icon" />
@@ -117,7 +136,19 @@ const toggleProfileDropdown = () => {
               Sign Up
             </button>
 
-            <div v-else class="mobile-profile-section">
+            <div v-if="isLoggedIn" class="mobile-cart-section">
+              <button class="mobile-cart-button">
+                <div class="mobile-cart-icon-wrapper">
+                  <ShoppingCart class="mobile-cart-icon" />
+                  <span v-if="cartCount > 0" class="mobile-cart-badge">{{
+                    cartCount
+                  }}</span>
+                </div>
+                <span class="mobile-cart-text">Cart</span>
+              </button>
+            </div>
+
+            <div v-if="isLoggedIn" class="mobile-profile-section">
               <button @click="toggleDropdown" class="mobile-profile-toggle">
                 <div class="mobile-user-icon">
                   <User class="mobile-icon" />
@@ -176,7 +207,7 @@ const toggleProfileDropdown = () => {
 }
 
 .logo-container {
-margin: auto 0
+  margin: auto 0;
 }
 
 .logo-link {
@@ -228,7 +259,6 @@ margin: auto 0
   background-color: rgba(74, 222, 128, 0.1);
 }
 
-/* Auth Section */
 .auth-section {
   display: none;
   align-items: center;
@@ -258,7 +288,6 @@ margin: auto 0
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Profile Dropdown */
 .profile-section {
   position: relative;
 }
@@ -465,7 +494,6 @@ margin: auto 0
 .mobile-auth-section {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #334155;
 }
 
 .mobile-signup-btn {
@@ -571,5 +599,126 @@ margin: auto 0
 .mobile-dropdown-item.logout:hover {
   background: rgba(248, 113, 113, 0.1);
   color: #f87171;
+}
+
+.cart-section {
+  display: none;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cart-section {
+    display: flex;
+  }
+}
+
+.cart-button {
+  position: relative;
+  padding: 0.75rem;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-button:hover {
+  background: rgba(74, 222, 128, 0.2);
+  transform: translateY(-2px);
+}
+
+.cart-icon-wrapper {
+  position: relative;
+}
+
+.cart-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #4ade80;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -1.2rem;
+  right: -1rem;
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem;
+  border: 2px solid #073d0b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-cart-section {
+  margin-top: 1rem;
+}
+
+.mobile-cart-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-cart-button:hover {
+  color: #4ade80;
+}
+
+.mobile-cart-icon-wrapper {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-cart-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #4ade80;
+}
+
+.mobile-cart-badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  min-width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+  border: 1px solid #073d0b;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-cart-text {
+  color: #4ade80;
+  font-weight: 500;
 }
 </style>

@@ -1,18 +1,13 @@
-<script setup></script>
+<script setup>
+import Hero from "../components/Hero.vue";
+import Trending from "../components/Trending.vue";
+</script>
 
 <template>
   <div>
-    <h1 class="page-container">
-      Welcome to EcoSphere
-    </h1>
+    <Hero />
+    <Trending />
   </div>
 </template>
 
-<style scoped>
-.page-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-</style>
+<style scoped></style>
