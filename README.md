@@ -91,7 +91,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact & Support
 
-- **Website**: [www.ecosphere.com](https://github.com/NasimRanaFeroz/EcoSphere)
+- **Website**: [www.ecosphere.com](https://eco-sphere-002.onrender.com/)
 - **Email**: feroznasimrana@gmail.com
 
 ## 🙏 Acknowledgments
