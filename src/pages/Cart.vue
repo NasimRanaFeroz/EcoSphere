@@ -57,14 +57,15 @@ const discountAmount = computed(() => {
 });
 
 const shipping = computed(() => {
-  return subtotal.value > 50 ? 0 : 5.99;
+  const baseShipping = subtotal.value > 50 ? 0 : 5.99;
+  return baseShipping;
 });
 
 const total = computed(() => {
   return subtotal.value - discountAmount.value + shipping.value;
 });
 
-const totalItems = computed(() => cartStore.totalItems);
+const totalItems = computed(() => cartStore.itemCount);
 
 const totalSavings = computed(() => {
   return (
@@ -103,7 +104,6 @@ const totalSavings = computed(() => {
     </section>
 
     <div class="cart-content">
-      <!-- Empty Cart State -->
       <div v-if="cartStore.items.length === 0" class="empty-cart-state">
         <div class="empty-cart-content">
           <ShoppingCart size="80" class="empty-icon" />
@@ -118,9 +118,7 @@ const totalSavings = computed(() => {
         </div>
       </div>
 
-      <!-- Cart with Items -->
       <div v-else class="cart-layout">
-        <!-- Cart Items -->
         <div class="cart-items-section">
           <div class="cart-items-header">
             <h2 class="items-title">Cart Items</h2>
@@ -240,7 +238,6 @@ const totalSavings = computed(() => {
               <div class="promo-hint">Try: ECO10, GREEN15, or PLANET20</div>
             </div>
 
-            <!-- Pricing Breakdown -->
             <div class="pricing-breakdown">
               <div class="price-row">
                 <span class="price-label"
@@ -335,6 +332,7 @@ const totalSavings = computed(() => {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-right: 2rem;
 }
 
 .back-btn:hover {

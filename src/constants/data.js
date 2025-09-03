@@ -59,9 +59,9 @@ import spongesImage from "../assets/GreenClean/sponge.webp";
 import multiSurfaceImage from "../assets/GreenClean/cleaner.webp";
 import scrubBrushImage from "../assets/GreenClean/scrub.webp";
 import floorCleanerImage from "../assets/GreenClean/floorCleaner.webp";
-
 export const sustainableHomeKitchen = [
   {
+    id: 1,
     name: "Bamboo Utensil Set",
     image: utensilImage,
     description:
@@ -74,6 +74,7 @@ export const sustainableHomeKitchen = [
     badgeText: "Home",
   },
   {
+    id: 2,
     name: "Compostable Trash Bags",
     image: trashBagImage,
     description:
@@ -87,6 +88,7 @@ export const sustainableHomeKitchen = [
     badgeText: "Compostable",
   },
   {
+    id: 3,
     name: "Reusable Silicone Food Covers",
     image: siliconeCoverImage,
     description:
@@ -99,6 +101,7 @@ export const sustainableHomeKitchen = [
     badgeText: "New",
   },
   {
+    id: 4,
     name: "Stainless Steel Water Bottle",
     image: waterBottleImage,
     description:
@@ -111,6 +114,7 @@ export const sustainableHomeKitchen = [
     badgeText: "Premium",
   },
   {
+    id: 5,
     name: "Organic Cotton Dishcloths",
     image: dishclothsImage,
     description:
@@ -123,6 +127,7 @@ export const sustainableHomeKitchen = [
     badgeText: "Organic",
   },
   {
+    id: 6,
     name: "Bamboo Cutting Board",
     image: cuttingBoardImage,
     description:
@@ -138,6 +143,7 @@ export const sustainableHomeKitchen = [
 
 export const ecoPersonalCare = [
   {
+    id: 7,
     name: "Bamboo Toothbrush Set",
     image: bambooToothbrushImage,
     description:
@@ -151,6 +157,7 @@ export const ecoPersonalCare = [
     badgeText: "Best Seller",
   },
   {
+    id: 8,
     name: "Organic Shampoo Bar",
     image: shampooBarImage,
     description:
@@ -163,6 +170,7 @@ export const ecoPersonalCare = [
     badgeText: "Organic",
   },
   {
+    id: 9,
     name: "Refillable Natural Deodorant",
     image: deodorantImage,
     description:
@@ -175,6 +183,7 @@ export const ecoPersonalCare = [
     badgeText: "Refillable",
   },
   {
+    id: 10,
     name: "Plant-based Toothpaste Tablets",
     image: toothpasteTabsImage,
     description:
@@ -187,6 +196,7 @@ export const ecoPersonalCare = [
     badgeText: "Zero Waste",
   },
   {
+    id: 11,
     name: "Biodegradable Cotton Swabs",
     image: cottonBudsImage,
     description:
@@ -199,6 +209,7 @@ export const ecoPersonalCare = [
     badgeText: "Plastic-Free",
   },
   {
+    id: 12,
     name: "Organic Body Soap Bar",
     image: bodySoapImage,
     description:
@@ -214,6 +225,7 @@ export const ecoPersonalCare = [
 
 export const zeroWasteLifestyle = [
   {
+    id: 13,
     name: "Reusable Produce Bags",
     image: reuseBagImage,
     description:
@@ -227,6 +239,7 @@ export const zeroWasteLifestyle = [
     badgeText: "Organic",
   },
   {
+    id: 14,
     name: "Beeswax Food Wraps",
     image: foodWrapImage,
     description:
@@ -239,6 +252,7 @@ export const zeroWasteLifestyle = [
     badgeText: "Natural",
   },
   {
+    id: 15,
     name: "Stainless Steel Straw Kit",
     image: strawKitImage,
     description:
@@ -251,6 +265,7 @@ export const zeroWasteLifestyle = [
     badgeText: "Kit",
   },
   {
+    id: 16,
     name: "Glass Food Storage Jars",
     image: glassJarsImage,
     description:
@@ -263,6 +278,7 @@ export const zeroWasteLifestyle = [
     badgeText: "Premium",
   },
   {
+    id: 17,
     name: "Refillable Cleaning Spray Bottle",
     image: sprayBottleImage,
     description:
@@ -275,6 +291,7 @@ export const zeroWasteLifestyle = [
     badgeText: "Refillable",
   },
   {
+    id: 18,
     name: "Compost Bin for Kitchen Scraps",
     image: compostBinImage,
     description:
@@ -290,6 +307,7 @@ export const zeroWasteLifestyle = [
 
 export const sustainableFashion = [
   {
+    id: 19,
     name: "Organic Cotton Tote Bag",
     image: handBagImage,
     description:
@@ -302,6 +320,7 @@ export const sustainableFashion = [
     badgeText: "Organic",
   },
   {
+    id: 20,
     name: "Hemp Fabric T-Shirt",
     image: hempShirtImage,
     description:
@@ -314,6 +333,7 @@ export const sustainableFashion = [
     badgeText: "Hemp",
   },
   {
+    id: 21,
     name: "Cork Leather Wallet",
     image: corkWalletImage,
     description:
@@ -326,6 +346,7 @@ export const sustainableFashion = [
     badgeText: "Vegan",
   },
   {
+    id: 22,
     name: "Recycled Plastic Sunglasses",
     image: sunglassesImage,
     description:
@@ -338,6 +359,7 @@ export const sustainableFashion = [
     badgeText: "Recycled",
   },
   {
+    id: 23,
     name: "Bamboo Fiber Socks",
     image: bambooSocksImage,
     description:
@@ -350,6 +372,7 @@ export const sustainableFashion = [
     badgeText: "Bamboo",
   },
   {
+    id: 24,
     name: "Eco-Friendly Sneakers",
     image: ecoSneakersImage,
     description:
@@ -366,6 +389,7 @@ export const sustainableFashion = [
 
 export const greenCleaningSupplies = [
   {
+    id: 25,
     name: "Plant-based Dish Soap",
     image: dishSoapImage,
     description:
@@ -379,6 +403,7 @@ export const greenCleaningSupplies = [
     badgeText: "Plant-Based",
   },
   {
+    id: 26,
     name: "Concentrated Laundry Detergent Refills",
     image: laundryRefillImage,
     description:
@@ -391,6 +416,7 @@ export const greenCleaningSupplies = [
     badgeText: "Refill",
   },
   {
+    id: 27,
     name: "Compostable Cleaning Sponges",
     image: spongesImage,
     description:
@@ -403,6 +429,7 @@ export const greenCleaningSupplies = [
     badgeText: "Compostable",
   },
   {
+    id: 28,
     name: "Eco-friendly Multi-surface Cleaner",
     image: multiSurfaceImage,
     description:
@@ -415,6 +442,7 @@ export const greenCleaningSupplies = [
     badgeText: "All-Natural",
   },
   {
+    id: 29,
     name: "Wooden Dish Scrub Brush",
     image: scrubBrushImage,
     description:
@@ -427,6 +455,7 @@ export const greenCleaningSupplies = [
     badgeText: "Wooden",
   },
   {
+    id: 30,
     name: "Natural Floor Cleaner",
     image: floorCleanerImage,
     description:

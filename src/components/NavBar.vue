@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import {
   ChevronDown,
   User,
@@ -8,12 +8,16 @@ import {
   BarChart3,
   ShoppingCart,
 } from "lucide-vue-next";
+import { useCartStore } from "./cart.js";
+
+const cartStore = useCartStore();
 
 const isLoggedIn = ref(true);
 const showDropdown = ref(false);
 const isMobileMenuOpen = ref(false);
 const showProfileDropdown = ref(false);
-const cartCount = ref(0);
+
+const cartItemCount = computed(() => cartStore.itemCount);
 
 const toggleLogin = () => {
   isLoggedIn.value = !isLoggedIn.value;
@@ -59,8 +63,8 @@ const toggleProfileDropdown = () => {
             <button @click="$router.push('/cart')" class="cart-button">
               <div class="cart-icon-wrapper">
                 <ShoppingCart class="cart-icon" />
-                <span v-if="cartCount > 0" class="cart-badge">{{
-                  cartCount
+                <span v-if="cartItemCount > 0" class="cart-badge">{{
+                  cartItemCount
                 }}</span>
               </div>
             </button>
@@ -137,11 +141,11 @@ const toggleProfileDropdown = () => {
             </button>
 
             <div v-if="isLoggedIn" class="mobile-cart-section">
-              <button class="mobile-cart-button">
+              <button @click="$router.push('/cart')" class="mobile-cart-button">
                 <div class="mobile-cart-icon-wrapper">
                   <ShoppingCart class="mobile-cart-icon" />
-                  <span v-if="cartCount > 0" class="mobile-cart-badge">{{
-                    cartCount
+                  <span v-if="cartItemCount > 0" class="mobile-cart-badge">{{
+                    cartItemCount
                   }}</span>
                 </div>
                 <span class="mobile-cart-text">Cart</span>
@@ -190,7 +194,7 @@ const toggleProfileDropdown = () => {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 99;
 }
 
 .navbar-container {
@@ -645,18 +649,18 @@ const toggleProfileDropdown = () => {
   position: absolute;
   top: -1.2rem;
   right: -1rem;
-  background: linear-gradient(to right, #ef4444, #dc2626);
+  background: linear-gradient(to right, #c2503e, #dc2626);
   color: white;
   font-size: 0.7rem;
   font-weight: 600;
-  min-width: 0.75rem;
-  height: 0.75rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.15rem;
-  border: 2px solid #073d0b;
+  padding: 0.6rem;
+  border: 1px solid #3f160b;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -706,13 +710,13 @@ const toggleProfileDropdown = () => {
   color: white;
   font-size: 0.75rem;
   font-weight: 500;
-  min-width: 1rem;
+  width: 1rem;
   height: 1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.1rem;
+  padding: 0.5rem;
   border: 1px solid #073d0b;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }

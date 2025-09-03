@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
-import { createIcons } from "lucide";
+import { createIcons, icons } from "lucide";
 
 onMounted(() => {
-  createIcons();
+  createIcons({ icons });
 
   const anchors = document.querySelectorAll('a[href^="#"]');
   const handleAnchorClick = (e) => {
