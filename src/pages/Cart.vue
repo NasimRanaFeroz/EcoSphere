@@ -12,7 +12,7 @@ import {
   Heart,
   Star,
 } from "lucide-vue-next";
-import { useCartStore } from "../components/cart.js";
+import { useCartStore } from "../components/Cart.js";
 import { useRouter } from "vue-router";
 
 const router = useRouter();

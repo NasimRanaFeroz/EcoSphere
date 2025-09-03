@@ -8,7 +8,7 @@ import {
   BarChart3,
   ShoppingCart,
 } from "lucide-vue-next";
-import { useCartStore } from "./cart.js";
+import { useCartStore } from "./Cart.js";
 
 const cartStore = useCartStore();
 
