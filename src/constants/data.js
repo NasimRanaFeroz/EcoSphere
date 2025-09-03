@@ -32,7 +32,7 @@ import waterBottleImage from "../assets/Home&Kitchen/waterBottle.jpeg";
 import dishclothsImage from "../assets/Home&Kitchen/dishCloth.jpg";
 import cuttingBoardImage from "../assets/Home&Kitchen/board.webp";
 
-import bambooToothbrushImage from "../assets/personal/bambooBrush.jpg";
+import bambooToothbrushImage from "../assets/Personal/bambooBrush.jpg";
 import bodySoapImage from "../assets/Personal/bodySoap.webp";
 import shampooBarImage from "../assets/Personal/shampoo.jpg";
 import deodorantImage from "../assets/Personal/deodorant.jpg";
